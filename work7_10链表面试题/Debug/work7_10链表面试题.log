@@ -1,0 +1,6 @@
+﻿  LinkList.c
+d:\c\work\work7_10链表面试题\work7_10链表面试题\linklist.c(14): warning C4013: “malloc”未定义；假设外部返回 int
+d:\c\work\work7_10链表面试题\work7_10链表面试题\linklist.c(57): warning C4013: “free”未定义；假设外部返回 int
+d:\c\work\work7_10链表面试题\work7_10链表面试题\linklist.c(457): warning C4133: “初始化”: 从“ComplexNode *”到“Node *”的类型不兼容
+d:\c\work\work7_10链表面试题\work7_10链表面试题\linklist.c(506): warning C4715: “Copy”: 不是所有的控件路径都返回值
+  work7_10链表面试题.vcxproj -> D:\c\work\work7_10链表面试题\Debug\work7_10链表面试题.exe

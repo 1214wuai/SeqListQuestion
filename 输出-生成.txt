@@ -1,0 +1,8 @@
+﻿1>------ 已启动生成: 项目: work7_10链表面试题, 配置: Debug Win32 ------
+1>LinkList.c
+1>d:\c\work\work7_10链表面试题\work7_10链表面试题\linklist.c(14): warning C4013: “malloc”未定义；假设外部返回 int
+1>d:\c\work\work7_10链表面试题\work7_10链表面试题\linklist.c(14): warning C4047: “初始化”:“Node *”与“int”的间接级别不同
+1>d:\c\work\work7_10链表面试题\work7_10链表面试题\linklist.c(57): warning C4013: “free”未定义；假设外部返回 int
+1>work7_10链表面试题.vcxproj -> D:\c\work\work7_10链表面试题\Debug\work7_10链表面试题.exe
+1>已完成生成项目“work7_10链表面试题.vcxproj”的操作。
+========== 生成: 成功 1 个，失败 0 个，最新 0 个，跳过 0 个 ==========
