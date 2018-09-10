@@ -140,8 +140,8 @@ void pLinkNodeJosephCycle(pNode * pplist, int num)
 		dell = NULL;
 	}
 	printf("%d\n", cur->data);
-	/*cur->next = NULL;
-	DestroyLinkList(&cur);*/
+	//cur->next = NULL;
+	//DestroyLinkList(&cur);//DestroyLinkList函数要遇到空才会停下来，所以要cur->next=NULL
 	free(cur);
 	cur = NULL;//两种删除方法均可
 }
@@ -281,15 +281,14 @@ Node* CheckCycle(pNode pList)
 	assert(pList != NULL);
 	cur1 = pList;
 	cur2 = pList;
-	if (cur1->next->next == NULL)
-	{
+	if ((cur1->next == NULL) || (cur1->next->next == NULL))
 		return NULL;
-	}
 	do
 	{
-		cur1 = cur1->next->next;
+		cur1 = cur1->next->next;//一个指针走两步，另外一个走一个，如果是环的话，两个指针终究会相遇
 		cur2 = cur2->next;
-	} while ((cur1 != NULL) && (cur1 != cur2)&&(cur1->next != NULL));
+	} while ((cur1 != NULL) && (cur1->next != NULL) 
+			&& (cur1 != cur2));
 	if (cur1 == cur2)
 	{
 		return cur1;
@@ -447,7 +446,6 @@ ComplexNode* BuyComplexNode(Datatype x)
 	node->_next = NULL;
 	node->_random = NULL;
 	node->_data = x;
-
 	return node;
 }
 
@@ -458,6 +456,7 @@ void PushFront2(pNode *pplist, Datatype d)
 	NewNode->next = *pplist;
 	*pplist = NewNode;
 }
+
 ComplexNode *Copy(pComplexNode *plist)//链表复制
 {
 	pComplexNode cur = NULL;
@@ -496,9 +495,7 @@ ComplexNode *Copy(pComplexNode *plist)//链表复制
 		cur->_next = cur->_next->_next;
 		cur = cur1->_next;
 		if (cur == NULL)
-		{
 			return ret;
-		}
 		cur1->_next = cur->_next;
 		cur1 = cur->_next;
 	}

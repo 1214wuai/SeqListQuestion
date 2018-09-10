@@ -160,8 +160,7 @@ TestMerge()
 	Node *plist = Merge(plist1, plist2);
 	PrintList(plist);
 	DestroyLinkList(&plist);
-	DestroyLinkList(&plist1);
-	DestroyLinkList(&plist2);
+	
 
 }
 
@@ -301,6 +300,7 @@ TestCheckCross()
 
 TestCheckCycleCross()
 {
+	/////////////////////////////////////////设置链表一
 	pNode plist1 = NULL;
 	PushFront(&plist1, 7);
 	PushFront(&plist1, 6);
@@ -324,7 +324,8 @@ TestCheckCycleCross()
 		cur2 = cur2->next;//链表一遍历到链尾
 	}
 	cur2->next = cur1;//设置 567 成环
-	pNode plist2 = NULL;
+	//////////////////////////////////////////
+	pNode plist2 = NULL;//设置链表二
 	PushFront(&plist2, 9);
 	PushFront(&plist2, 8);
 	pNode cur5 = plist2;
@@ -333,8 +334,9 @@ TestCheckCycleCross()
 	{
 		cur5=cur5->next;//链表二遍历到链尾
 	}
-	cur5->next = cur3;//环外节点设置为交点
+	//cur5->next = cur3;//环外节点设置为交点
 	cur5->next = cur4;//环内节点设置为交点，交点选择其一即可，注释掉其中一句
+	///////////////////////////////////////////
 	pNode ret1 = CheckCycleCross(plist1, plist2);
 	if (ret1 != NULL)
 	{
@@ -385,22 +387,22 @@ TestUnionSet()
 }
 int main()
 {
-	//TestPushFront();
-	//TestPrintTailToHead();
-	//TestFind();
-	//TestEraseNotTail();
-	//TestInsertNode();
+	TestPushFront();
+	TestPrintTailToHead();
+	TestFind();
+	TestEraseNotTail();
+	TestInsertNode();
 	TestpLinkNodeJosephCycle();
-	//TestReverseList();
-	//TestBubbleSort();
-	//TestMerge();
-	//TestFindMidNode();
-	//TestCheckCycle();
-	//TestGetCircleLength();
-	//TestCheckCross();
-	//TestCheckCycleCross();
-	//TestComplexNode();
-	TestUnionSet();
+	TestReverseList();
+	TestBubbleSort();
+	TestMerge();
+	TestFindMidNode();
+	TestCheckCycle();
+	TestGetCircleLength();
+	TestCheckCross();
+	TestCheckCycleCross();
+	TestComplexNode();
+	TestUnionSet();//
 	system("pause");
 	return 0;
 }
