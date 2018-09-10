@@ -77,7 +77,7 @@ TestInsertNode()
 
 }
 
-creat_Link(int num)
+Node *creat_Link(int num)
 {
 	Node *p;
 	Node *q;

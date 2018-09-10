@@ -1,12 +1,2 @@
 ﻿  test.c
-d:\c\work\work7_10链表面试题\work7_10链表面试题\test.c(86): warning C4013: “malloc”未定义；假设外部返回 int
-d:\c\work\work7_10链表面试题\work7_10链表面试题\test.c(97): warning C4047: “return”:“int”与“Node *”的间接级别不同
-d:\c\work\work7_10链表面试题\work7_10链表面试题\test.c(108): warning C4013: “free”未定义；假设外部返回 int
-d:\c\work\work7_10链表面试题\work7_10链表面试题\test.c(115): warning C4047: “初始化”:“Node *”与“int”的间接级别不同
-d:\c\work\work7_10链表面试题\work7_10链表面试题\test.c(354): warning C4013: “BuyComplexNode”未定义；假设外部返回 int
-d:\c\work\work7_10链表面试题\work7_10链表面试题\test.c(354): warning C4047: “初始化”:“ComplexNode *”与“int”的间接级别不同
-d:\c\work\work7_10链表面试题\work7_10链表面试题\test.c(355): warning C4047: “初始化”:“ComplexNode *”与“int”的间接级别不同
-d:\c\work\work7_10链表面试题\work7_10链表面试题\test.c(356): warning C4047: “初始化”:“ComplexNode *”与“int”的间接级别不同
-d:\c\work\work7_10链表面试题\work7_10链表面试题\test.c(357): warning C4047: “初始化”:“ComplexNode *”与“int”的间接级别不同
-d:\c\work\work7_10链表面试题\work7_10链表面试题\test.c(406): warning C4013: “system”未定义；假设外部返回 int
   work7_10链表面试题.vcxproj -> D:\c\work\work7_10链表面试题\Debug\work7_10链表面试题.exe

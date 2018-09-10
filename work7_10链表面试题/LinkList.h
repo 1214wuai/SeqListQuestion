@@ -1,6 +1,7 @@
 #ifndef __LINKLIST_H__
 #define _LINKLIST_H__
 #include <stdio.h>
+#include<stdlib.h>
 #include <assert.h>
 #include<string.h>
 #include<math.h>
@@ -52,7 +53,7 @@ typedef struct ComplexNode
 	struct ComplexNode* _next;
 	struct ComplexNode* _random;
 }ComplexNode,*pComplexNode;
-
+ComplexNode* BuyComplexNode(Datatype x);
 ComplexNode *Copy(pComplexNode *plist);//复杂链表复制
 //15. 求两个有序单链表交集(差集)。 
 void UnionSet(pNode l1, pNode l2);

@@ -495,10 +495,11 @@ ComplexNode *Copy(pComplexNode *plist)//Á´±í¸´ÖÆ
 		cur->_next = cur->_next->_next;
 		cur = cur1->_next;
 		if (cur == NULL)
-			return ret;
+			break;//return ret;
 		cur1->_next = cur->_next;
 		cur1 = cur->_next;
 	}
+	return ret;
 }
 
 void UnionSet(pNode l1, pNode l2)
