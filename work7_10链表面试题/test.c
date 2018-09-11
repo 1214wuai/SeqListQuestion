@@ -22,6 +22,7 @@ TestPrintTailToHead()
 	PushFront(&plist, 1);
 	PrintList(plist);
 	PrintTailToHead(plist);
+	PrintTailToHeadR(plist);
 	DestroyLinkList(&plist);
 }
 
@@ -167,6 +168,8 @@ TestMerge()
 TestFindMidNode()
 {
 	Node* plist = NULL;
+	//PushFront(&plist, 6);
+
 	PushFront(&plist, 5);
 	PushFront(&plist, 4);
 	PushFront(&plist, 3);
@@ -180,11 +183,11 @@ TestFindMidNode()
 TestFindLastKNode()
 {
 	Node *plist = NULL;
-	PushFront(&plist, 7);
+	/*PushFront(&plist, 7);
 	PushFront(&plist, 6);
 	PushFront(&plist, 5);
 	PushFront(&plist, 4);
-	PushFront(&plist, 3);
+	PushFront(&plist, 3);*/
 	PushFront(&plist, 2);
 	PushFront(&plist, 1);
 	FindLastKNode(&plist,3);
@@ -387,22 +390,23 @@ TestUnionSet()
 }
 int main()
 {
-	TestPushFront();
-	TestPrintTailToHead();
-	TestFind();
-	TestEraseNotTail();
-	TestInsertNode();
-	TestpLinkNodeJosephCycle();
-	TestReverseList();
-	TestBubbleSort();
-	TestMerge();
-	TestFindMidNode();
-	TestCheckCycle();
-	TestGetCircleLength();
-	TestCheckCross();
+	//TestPushFront();
+	//TestPrintTailToHead();
+	//TestFind();
+	//TestEraseNotTail();
+	//TestInsertNode();
+	//TestpLinkNodeJosephCycle();
+	//TestReverseList();
+	//TestBubbleSort();
+	//TestMerge();
+	//TestFindMidNode();
+	//TestFindLastKNode();
+	//TestCheckCycle();
+	//TestGetCircleLength();
+	//TestCheckCross();
 	TestCheckCycleCross();
-	TestComplexNode();
-	TestUnionSet();//
+	//TestComplexNode();
+	//TestUnionSet();//
 	system("pause");
 	return 0;
 }

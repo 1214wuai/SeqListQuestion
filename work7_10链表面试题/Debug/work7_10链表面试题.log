@@ -1,2 +1,5 @@
-﻿  test.c
+﻿  LinkList.c
+  test.c
+d:\c\work\work7_10链表面试题\work7_10链表面试题\test.c(25): warning C4013: “PrintTailToHeadR”未定义；假设外部返回 int
+  正在生成代码...
   work7_10链表面试题.vcxproj -> D:\c\work\work7_10链表面试题\Debug\work7_10链表面试题.exe

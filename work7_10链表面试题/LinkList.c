@@ -45,6 +45,18 @@ void PrintTailToHead(pNode plist)
 	printf("Over\n");
 }
 
+void PrintTailToHeadR(pNode pList)//递归实现
+{
+	if (pList != NULL)
+	{
+		if (pList->next != NULL)
+		{
+			PrintTailToHeadR(pList->next);
+		}
+		printf("%d-->", pList->data);
+	}
+}
+
 void DestroyLinkList(pNode *pplist)
 {
 	pNode cur = NULL;
@@ -88,6 +100,9 @@ void  InsertNode(pNode pos, Datatype d)
 	pNode NewNode = BuyNode(d);
 	NewNode->next = pos->next;
 	pos->next = NewNode;
+	Datatype tmp = pos->data;
+	pos->data = NewNode->data;
+	NewNode->data = tmp;
 }
 
 void pLinkNodeJosephCycle(pNode * pplist, int num)
@@ -151,7 +166,6 @@ Node* ReverseList(pNode * pplist)
 	pNode cur = NULL;
 	pNode cur1 = NULL;
 	pNode cur2 = NULL;
-
 	assert(pplist != NULL);
 	assert(*pplist != NULL);
 	cur = *pplist;
@@ -187,7 +201,7 @@ void BubbleSort(pNode * pplist)
 			cur = next;
 			next = cur->next;
 		}
-		tail = cur;
+		tail = cur;//每次排完一趟序就吧tail指针往前移一个指针
 	}
 }
 
@@ -241,7 +255,7 @@ Node* FindMidNode(pNode plist)
 	assert(plist != NULL);
 	p1 = plist;
 	p2 = plist;
-	while (p1->next != NULL)
+	while (p1 != NULL&&p1->next != NULL )
 	{
 		for (int i = 0; i < 2; i++)
 		{
@@ -264,7 +278,13 @@ void FindLastKNode(pNode *pplist, int k)
 
 	for (int i = 1; i < k; i++)
 	{
-		p1 = p1->next;
+		if(p1->next != NULL)
+			p1 = p1->next;
+		else
+		{
+			printf("链表不够长，没有倒数第%d个元素\n", k);
+			return;
+		}
 	}
 	while (p1->next != NULL)
 	{
@@ -287,8 +307,8 @@ Node* CheckCycle(pNode pList)
 	{
 		cur1 = cur1->next->next;//一个指针走两步，另外一个走一个，如果是环的话，两个指针终究会相遇
 		cur2 = cur2->next;
-	} while ((cur1 != NULL) && (cur1->next != NULL) 
-			&& (cur1 != cur2));
+	} while ((cur1 != NULL) && (cur1->next != NULL) //不成环
+			&& (cur1 != cur2));//成环
 	if (cur1 == cur2)
 	{
 		return cur1;
@@ -370,8 +390,8 @@ Node * CheckCross(pNode list1, pNode list2)
 	{
 		return NULL;
 	}
-
 }
+
 Node * CheckCycleCross(pNode list1, pNode list2)
 {
 	pNode p1 = NULL;
@@ -403,6 +423,8 @@ Node * CheckCycleCross(pNode list1, pNode list2)
 		return NULL;
 	}
 	pNode entry = GetCycleEntryNode(list1, meet);//环的入口
+	
+
 	while (p1->next != meet)
 	{
 		p1 = p1->next;
@@ -449,13 +471,13 @@ ComplexNode* BuyComplexNode(Datatype x)
 	return node;
 }
 
-void PushFront2(pNode *pplist, Datatype d)
-{
-	Node* NewNode = BuyComplexNode(d);
-	assert(pplist != NULL);
-	NewNode->next = *pplist;
-	*pplist = NewNode;
-}
+//void PushFront2(pNode *pplist, Datatype d)
+//{
+//	ComplexNode* NewNode = BuyComplexNode(d);
+//	assert(pplist != NULL);
+//	NewNode->_next = *pplist;
+//	*pplist = NewNode;
+//}
 
 ComplexNode *Copy(pComplexNode *plist)//链表复制
 {
